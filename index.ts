@@ -1,12 +1,12 @@
-import { initMap } from './map/mapInitialization';
+import { initMapSecond } from './map/mapInitialization';
 import { addMarker } from './map/markerManager';
 import { setupUIHandlers } from './map/handlers';
 
 let map: google.maps.Map;
 let markers: google.maps.Marker[] = [];
 
-function main() {
-  map = initMap();
+function initMap() {
+  map = initMapSecond();
   setupUIHandlers(map, markers);
 
   map.addListener("click", (event: google.maps.MapMouseEvent) => {
@@ -14,4 +14,4 @@ function main() {
   });
 }
 
-window.initMap = main;
+window.initMap = initMap;
