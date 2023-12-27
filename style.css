@@ -1,14 +1,7 @@
-/* 
- * Always set the map height explicitly to define the size of the div element
- * that contains the map. 
- */
- #map {
+#map {
   height: 100%;
 }
 
-/* 
- * Optional: Makes the sample page fill the window. 
- */
 html,
 body {
   height: 100%;
@@ -22,17 +15,17 @@ body {
 #delete-selected-marker {
   border: 1px solid black;
   border-radius: 5px;
-  padding: 5px 10px; /* Додаємо відступ для тексту всередині кнопок */
-  cursor: pointer; /* Курсор руки, щоб показати, що кнопка клікабельна */
-  background-color: white; /* Базовий колір фону */
-  transition: background-color 0.3s, color 0.3s; /* Плавна зміна кольорів при наведенні */
+  padding: 5px 10px;
+  cursor: pointer;
+  background-color: white;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 #show-markers:hover,
 #hide-markers:hover, 
 #delete-markers:hover {
-  background-color: #010101; /* Світлий сірий колір фону при наведенні */
-  color: white; /* Зміна кольору тексту, якщо потрібно */
+  background-color: #010101;
+  color: white;
 }
 
 #floating-panel {
@@ -44,10 +37,10 @@ body {
   border: 1px solid black;
   border-radius: 8px;
   padding: 10px;
-  transition: transform 0.3s ease; /* Додаємо плавну транзицію для transform */
+  transition: transform 0.3s ease;
 }
 
 #floating-panel:hover {
-  transform: scale(1.1); /* Збільшуємо елемент на 10% при наведенні */
+  transform: scale(1.1);
 }
 
