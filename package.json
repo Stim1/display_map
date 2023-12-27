@@ -8,7 +8,7 @@
     "maps",
     "samples"
   ],
-  "homepage": "https://github.com/googlemaps/js-samples#readme",
+  "homepage": "https://github.com/googlemaps/js-samples",
   "bugs": {
     "url": "https://github.com/googlemaps/js-samples/issues"
   },
@@ -19,6 +19,7 @@
   "files": [],
   "license": "Apache-2.0",
   "scripts": {
+    "deploy": "gh-pages -d build",
     "dev": "vite",
     "start": "vite",
     "build": "vite build --outDir dist --base './'",
@@ -27,6 +28,7 @@
   },
   "devDependencies": {
     "@types/google.maps": "^3.53.5",
+    "gh-pages": "^6.1.1",
     "typescript": "^5.2.2",
     "vite": "^4.4.12"
   },
