@@ -2,7 +2,7 @@
   "deploy": "gh-pages -d build",
   "name": "marker-labels",
   "version": "2.1.4",
-  "homepage": "https://github.com/googlemaps/show-map", 
+  "homepage": "https://github.com/googlemaps/show-map",
   "files": [],
   "license": "Apache-2.0",
   "scripts": {
