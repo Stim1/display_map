@@ -1,0 +1,45 @@
+#map {
+  height: 100%;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#show-markers,
+#hide-markers, 
+#delete-markers,
+#delete-selected-marker {
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  background-color: white;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#show-markers:hover,
+#hide-markers:hover, 
+#delete-markers:hover {
+  background-color: #010101;
+  color: white;
+}
+
+#floating-panel {
+  position: absolute;
+  top: 30px;
+  left: 10%;
+  z-index: 5;
+  background-color: #ffffff;
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 10px;
+  transition: transform 0.3s ease;
+}
+
+#floating-panel:hover {
+  transform: scale(1.1);
+}
