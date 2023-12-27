@@ -1,26 +1,12 @@
 {
   "deploy": "gh-pages -d build",
   "name": "marker-labels",
-  "description": "Samples for Google Maps JavaScript",
   "version": "2.1.4",
-  "keywords": [
-    "google",
-    "javascript",
-    "maps",
-    "samples"
-  ],
-  "homepage": "https://github.com/googlemaps/show-map",
-  "bugs": {
-    "url": "https://github.com/googlemaps/js-samples/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/googlemaps/js-samples.git"
-  },
+  "homepage": "https://github.com/googlemaps/show-map", 
   "files": [],
   "license": "Apache-2.0",
   "scripts": {
-    "deploy": "gh-pages -d dist",
+    "deploy": "main -d dist",
     "dev": "vite",
     "start": "vite",
     "build": "vite build --outDir dist --base './'",
