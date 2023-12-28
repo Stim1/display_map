@@ -23,7 +23,8 @@ body {
 
 #show-markers:hover,
 #hide-markers:hover, 
-#delete-markers:hover {
+#delete-markers:hover,
+#delete-selected-marker:hover {
   background-color: #010101;
   color: white;
 }

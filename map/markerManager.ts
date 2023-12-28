@@ -1,6 +1,10 @@
 import { addQuestToFirebase, updateQuestLocation } from '../firebase/firebaseService';
 
-export function addMarker(map: google.maps.Map, position: google.maps.LatLng | google.maps.LatLngLiteral, markers: google.maps.Marker[]): void {
+export function addMarker(
+  map: google.maps.Map,
+  position: google.maps.LatLng | google.maps.LatLngLiteral,
+  markers: google.maps.Marker[]
+): void {
   let positionData: google.maps.LatLngLiteral;
 
   if (position instanceof google.maps.LatLng) {
@@ -13,7 +17,10 @@ export function addMarker(map: google.maps.Map, position: google.maps.LatLng | g
     position,
     map,
     draggable: true,
+    label: `${markers.length + 1}`,
   });
+
+  marker.set('isSelected', false);
 
   const newQuestKey = addQuestToFirebase(positionData);
   if (newQuestKey) {
@@ -29,15 +36,14 @@ export function addMarker(map: google.maps.Map, position: google.maps.LatLng | g
 
 function selectMarker(marker: google.maps.Marker, markers: google.maps.Marker[]): void {
   markers.forEach(m => {
-    if (m !== marker) {
-      m.setAnimation(null);
-    }
+    m.set('isSelected', false);
   });
-  marker.setAnimation(google.maps.Animation.BOUNCE);
+  
+  marker.set('isSelected', true);
 }
 
 export function deleteSelectedMarker(markers: google.maps.Marker[]): void {
-  const selectedMarker = markers.find(marker => marker.getAnimation() !== null);
+  const selectedMarker = markers.find(marker => marker.get('isSelected') === true);
   if (selectedMarker) {
     selectedMarker.setMap(null);
     const index = markers.indexOf(selectedMarker);
